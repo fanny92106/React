@@ -40,9 +40,13 @@
         - 组件: 用来实现局部功能效果的代码和资源的集合(html/css/js/image等等资源)
     
     
-    b. 函数组件 -- 简单组件
+    b. 函数组件 -- 简单组件 (组件无状态)
     
     ![functionComponent](imagePool/functionComponent.png)
     
     
-    c. 类组件 -- 复杂组件
+    c. 类组件 -- 复杂组件 (组件有状态)
+    
+    ![classComponent](imagePool/classComponent.png)
+    
+    
