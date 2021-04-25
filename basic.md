@@ -50,3 +50,18 @@
     ![classComponent](imagePool/classComponent.png)
     
     
+    d. 组件实例 ( 类式组件 ) 的三大核心属性: state, props, refs
+    
+        (1). state
+                - state 是一个对象, 里面存放键值对代表class member + val
+                - 组件被称为"状态机", 通过更新组件的state来更新对应的页面显示(重新渲染组件)
+                - 组件中constructor 和 render方法中的this为组件实例对象
+                - 组件自定义的方法中this为undefined, 需要
+                    a. 强制绑定this: 通过函数对象的bind()
+                    b. 箭头函数 + 赋值语句
+                - 状态数据不能直接修改, 需要借助this.setState({key: val})
+                
+    ![componentState](imagePool/componentState.png)
+
+        (2). props
+                - 
