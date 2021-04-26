@@ -64,4 +64,10 @@
     ![componentState](imagePool/componentState.png)
 
         (2). props
-                - 
+                - 每个组件对象都会有props(properties的简写)属性
+                - 组件标签的所有属性都保存在props中
+                - 通过标签属性从组件外向组件内传递变化的数据
+                - 组件内部不能修改props数据, props是read-only
+                
+    ![classComponentProps](imagePool/classComponentProps.png)
+    ![funcComponentProps](imagePool/funcComponentProps.png)
