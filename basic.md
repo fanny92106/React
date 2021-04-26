@@ -71,3 +71,18 @@
                 
     ![classComponentProps](imagePool/classComponentProps.png)
     ![funcComponentProps](imagePool/funcComponentProps.png)
+    
+        (3). refs
+        
+            a. string形式的ref -- 性能最慢, 不推荐 ❌
+            b-1. 回调inline函数形式的ref  -- 工程常用 ⭐️⭐️⭐️⭐️
+            
+    ![inlineCallbackRef](imagePool/inlineCallbackRef.png)
+            
+            b-2. 回调外部函数形式的ref ⭐️⭐️⭐️
+            
+    ![callBackRef](imagePool/callBackRef.png)
+    
+            c. React.createRef() -- 官方推荐使用 ⭐️⭐️⭐️⭐️⭐️
+    
+    ![React.createRef](imagePool/React.createRef.png)
