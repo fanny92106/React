@@ -149,3 +149,24 @@
             3. 卸载组件: 由ReactDOM.unmountComponentAtNode()触发
                     - componentWillUnmount() 
     
+4. 路由
+
+    a. SPA的理解
+    
+        1. 单页Web应用 (single page web application, SPA)
+        2. 整个应用只有一个完整的页面
+        3. 点击页面中的链接不会刷新页面, 只会做页面的局部更新
+        4. 数据都需要通过ajax请求获取, 并在前端异步展示
+        
+    b. 路由的理解
+    
+        前端路由: 
+            1. 浏览器端路由, value是component, 用于展示页面内容
+            2. 注册路由: <Router path="/test" component={Test}>
+            3. 工作过程: 当浏览器的path变为/test时, 当前路由组件就会变为Test组件
+        
+        前端路由工作原理:
+            1. 点击路由链接, 改变浏览器的历史记录路径, 因而被前端路由器所监测到
+            2. 注册路由, 前端路由器根据浏览器路径的变化, 匹配并展示相对应的组件
+        
+    ![routeBasic](imagePool/routeBasic.png)
