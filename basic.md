@@ -170,3 +170,29 @@
             2. 注册路由, 前端路由器根据浏览器路径的变化, 匹配并展示相对应的组件
         
     ![routeBasic](imagePool/routeBasic.png)
+    
+    c. 路由组件 vs 一般组件
+        
+            1. 写法不同:
+                    一般组件: <Demo/>
+                    路由组件: <Route path="/demo" component={Demo}/>
+            2. 存放位置不同：
+                    一般组件: components
+                    路由组件: pages
+            3. 接收到的props不同
+                    一般组件: 写组件标签时传递了什么, 就能收到什么
+                    路由组件: 接收到三个固定的属性 (history, location, match)
+                        history:
+                            go: f go(n)
+                            goBack: f goBack()
+                            goForward: f goForward()
+                            push: f push(path, state)
+                            replace: f replace(path, state)
+                        location:
+                            pathname: "/about"
+                            search: ""
+                            state: undefined
+                        match:
+                            params: {}
+                            path: "/about"
+                            url: "/about"
