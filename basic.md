@@ -196,3 +196,14 @@
                             params: {}
                             path: "/about"
                             url: "/about"
+
+5. Redux
+
+    a. 定义
+            
+            - 专门做状态管理的js库
+            - 集中管理react应用中多个组件共享的状态
+    
+    b. 原理图
+    
+    ![react-redux](imagePool/react-redux-overview.png)
