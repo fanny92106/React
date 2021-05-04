@@ -218,9 +218,24 @@
     
     b. 常用的3个Hook
         
-            - State Hook: React.useState() 使用state
+            1. State Hook: React.useState() 
+                - 使用state
     ![useStateHook](imagePool/useStateHook.png)
             
-            - Effect Hook: React.useEffect() 使用声明周期钩子
-            - Ref Hook: React.useRef()
+            2. Effect Hook: React.useEffect() 使用声明周期钩子
+                - 在函数组件中执行副作用操作, 即模拟类组件中的生命周期钩子, eg: 发ajax请求, 设置订阅, 启动定时器, 手动更改真实DOM
+                - 语法:
+                    useEffect(() => {
+                        return () => {
+                            // 类似componentWillUnmount: 用于做一些收尾工作, 比如清除一些定时器, 取消订阅
+                        }
+                    }, [stateValue]) // 如果指定的是空[], 回调函数只会在第一次render()后执行, 相当于componentDidMount; 如果不是空[], 回调函数会在每次元素更新后执行, 相当于componentDidUpdate
+                - 总结:
+                    useEffect Hook 可以看做是三个钩子的组合:
+                        - componentDidMount()
+                        - componentDidUpdate()
+                        - componentWillUnmount()
+    ![useEffectHook](imagePool/useEffectHook.png)
+    
+            3. Ref Hook: React.useRef()
             
