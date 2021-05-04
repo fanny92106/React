@@ -207,3 +207,20 @@
     b. 原理图
     
     ![react-redux](imagePool/react-redux-overview.png)
+
+
+6. Hooks
+    
+    a. 定义
+        
+            - 可以在函数组件中使用state以及其他React特性
+            - React 16.8.0之后的新语法
+    
+    b. 常用的3个Hook
+        
+            - State Hook: React.useState() 使用state
+    ![useStateHook](imagePool/useStateHook.png)
+            
+            - Effect Hook: React.useEffect() 使用声明周期钩子
+            - Ref Hook: React.useRef()
+            
