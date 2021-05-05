@@ -266,3 +266,9 @@
                 只是进行state和props数据的浅比较, 如果只是数据对象内部数据变了, 返回false
                 因此, 更新state数据时不要直接更改state数据本身, 而要产生一个新的数据
                 
+8. renderProps 插槽技术
+
+        如何向组件内部动态传入带内容的结构(标签)?
+            - 使用render props: 通过组件标签属性传入结构
+        
+![renderProps](imagePool/renderProps.png)
