@@ -245,3 +245,24 @@
                 - 作用: 保存标签对象, 功能与React.createRef()一样
                 
     ![useRefHook](imagePool/useRefHook.png)
+
+
+7. 组件优化
+
+        a. Component的2个问题
+            1. 只要执行setState(), 即使不改变状态数据, 组件也会重新render() ===> 效率低
+            2. 只要当前组件重新render(), 就会自动重新render子组件, 纵使子组件没有用到父组件的任何数据 ===> 效率低
+        
+        b. 高效的做法:
+            只有当组件的state或props数据发生变化时才重新render()
+        
+        c. 原因:
+            Component中的shouldComponentUpdate()总是返回true
+        
+        d. 解决:
+            使用PureComponent替换Component来优化性能
+            PureComponent重写了shouldComponentUpdate(), 只有state或props数据发生变化了才返回true
+            注:
+                只是进行state和props数据的浅比较, 如果只是数据对象内部数据变了, 返回false
+                因此, 更新state数据时不要直接更改state数据本身, 而要产生一个新的数据
+                
